@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valorant Tactical AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <div class="app">
+    <h1>🎯 Tactical AI Coach</h1>
+    <p class="subtitle">Improve round decisions between fights.</p>
+
+    <div class="section">
+      <h2>Match Setup</h2>
+
+      <div class="input-group">
+        <label>Map</label>
+        <select id="map">
+          <option value="">Select map</option>
+          <option value="Ascent">Ascent</option>
+          <option value="Bind">Bind</option>
+          <option value="Haven">Haven</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label>Your Agent</label>
+        <select id="agent">
+          <option value="">Select agent</option>
+          <option value="Jett">Jett</option>
+          <option value="Reyna">Reyna</option>
+          <option value="Phoenix">Phoenix</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label>Enemy Agents</label>
+        <input type="text" id="enemies" placeholder="Reyna, Skye" />
+      </div>
+
+      <div class="input-group">
+        <label>Round Type</label>
+        <select id="round">
+          <option value="">Select round type</option>
+          <option value="Pistol">Pistol</option>
+          <option value="Eco">Eco</option>
+          <option value="Full Buy">Full Buy</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="mode-toggle">
+      <span>Quick</span>
+      <label class="switch">
+        <input type="checkbox" id="modeToggle" />
+        <span class="slider"></span>
+      </label>
+      <span>Pro</span>
+    </div>
+
+    <button onclick="analyze()">Analyze Round</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
