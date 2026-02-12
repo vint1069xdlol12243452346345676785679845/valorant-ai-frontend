@@ -17,7 +17,7 @@ async function analyze() {
   output.innerHTML = "🧠 Analyzing round...";
 
   try {
-    const res = await fetch("https://valorant-ai-backend-oo4o-hmbarzoxn-vint10s-projects.vercel.app/api/coach", {
+    const res = await fetch("https://valorant-ai-backend.vercel.app/api/coach", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
